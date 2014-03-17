@@ -267,7 +267,7 @@ run_stitch(#st{table = Tab,
                strategy = all_remote_keys, remote = Remote} = St) ->
     Keys = mnesia:dirty_all_keys(Tab),
     RemoteKeys = rpc:call(Remote, mnesia, dirty_all_keys, [Tab]),
-    Union = sets:to_list(sets:union(sets:from_list(Keys), sets:from_list(RemoteKeys))),
+    Union = lists:umerge(lists:sort(Keys), lists:sort(RemoteKeys)),
     lists:foldl(
       fun(K, Sx) ->
               A = mnesia:read({Tab,K}),
