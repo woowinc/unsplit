@@ -45,7 +45,7 @@
 
 -define(SERVER, ?MODULE).
 -define(DEFAULT_METHOD, {unsplit_lib, no_action, []}).
--define(DEFAULT_STRATEGY, all_keys).
+-define(DEFAULT_STRATEGY, all_remote_keys).
 
 -define(DONE, {?MODULE,done}).
 
