@@ -144,7 +144,7 @@ compare(Obj, T, P, Comp) ->
 	    case Comp(ModA, ModB) of
 		left    -> {write, B};
 		right   -> {write, A};
-		neither -> unsplit:report_inconsistency(T, A, B)
+		neither -> unsplit:report_inconsistency(T, <<"neither">>, A, B)
 	    end
     end.
 
