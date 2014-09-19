@@ -32,7 +32,7 @@
  [{vsn, "0.5"},
   {modules, []},
   {description, "Merges mnesia tables after net split."},
-  {applications, [stdlib, kernel, mnesia]},
+  {applications, [kernel, stdlib, mnesia]},
   {registered, []},
   {mod, {unsplit, []}},
   {env, [
